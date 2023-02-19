@@ -22,7 +22,7 @@ while True:
         for handLms in results.multi_hand_landmarks:
             for id, landMK in enumerate(handLms.landmark):
                 # print(id, landMK)
-                imgHeight, imgWidth, imgC = img.shape
+                imgHeight, imgWidth, imgChannel = img.shape
                 cx, cy = int(landMK.x * imgWidth), int(landMK.y * imgHeight)
                 print(id, cx, cy)
                 if id == 0:

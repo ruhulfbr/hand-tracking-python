@@ -32,7 +32,7 @@ class HandDitector:
 
             handLms = self.results.multi_hand_landmarks[handNo]
             for id, landMK in enumerate(handLms.landmark):
-                imgHeight, imgWidth, imgC = img.shape
+                imgHeight, imgWidth, imgChannel = img.shape
                 cx, cy = int(landMK.x * imgWidth), int(landMK.y * imgHeight)
                 # print(id, cx, cy)
                 if draw:
